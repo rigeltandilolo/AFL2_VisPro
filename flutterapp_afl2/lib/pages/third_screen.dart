@@ -10,7 +10,6 @@ class ThirdScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            // Add padding to the profile picture and name
             Padding(
               padding: EdgeInsets.only(top: 20),
               child: Align(
@@ -45,7 +44,6 @@ class ThirdScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Left-align the about me text
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -58,7 +56,6 @@ class ThirdScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Left-align the information rows
             _buildInfoRow('Email', 'rigel@gmail.com', Icons.email, Colors.red),
             _buildInfoRow('Phone Number', '+62 852 4553 3318', Icons.phone, Colors.red),
             _buildInfoRow('Address', 'Sudiang City', Icons.home, Colors.red),
