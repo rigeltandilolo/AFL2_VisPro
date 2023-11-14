@@ -7,61 +7,63 @@ class ThirdScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profile'),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Align(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 220,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 8.0,
+                              spreadRadius: 2.0,
+                            ),
+                          ],
+                        ),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('assets/fotoprofil.jpg'),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'Rigel Sundun Tandilolo',
+                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Align(
                 alignment: Alignment.center,
-                child: Column(
-                  children: [
-                    Container(
-                      width: 220,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.2),
-                            blurRadius: 8.0,
-                            spreadRadius: 2.0,
-                          ),
-                        ],
-                      ),
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage('assets/fotoprofil.jpg'),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      'Rigel Sundun Tandilolo',
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    'Informatics student that hates all about coding. ',
+                    style: TextStyle(fontSize: 16),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Text(
-                  'Informatics student that hates all about coding.',
-                  style: TextStyle(fontSize: 16),
-                  textAlign: TextAlign.left,
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            _buildInfoRow('Email', 'rigel@gmail.com', Icons.email, Colors.red),
-            _buildInfoRow('Phone Number', '+62 852 4553 3318', Icons.phone, Colors.red),
-            _buildInfoRow('Address', 'Sudiang City', Icons.home, Colors.red),
-            _buildInfoRow('University', 'UC Makassar', Icons.school, Colors.red),
-            _buildInfoRow('Major', 'Informatics', Icons.cast_for_education, Colors.red),
-          ],
+              SizedBox(height: 20),
+              _buildInfoRow('Email', 'rigel@gmail.com', Icons.email, Colors.red),
+              _buildInfoRow('Phone Number', '+62 852 4553 3318', Icons.phone, Colors.red),
+              _buildInfoRow('Address', 'Sudiang City', Icons.home, Colors.red),
+              _buildInfoRow('University', 'UC Makassar', Icons.school, Colors.red),
+              _buildInfoRow('Major', 'Informatics', Icons.cast_for_education, Colors.red),
+            ],
+          ),
         ),
       ),
     );

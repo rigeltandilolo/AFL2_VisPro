@@ -14,6 +14,7 @@ class _SecondScreenState extends State<SecondScreen> {
     SkillItem(name: 'UI/UX Design', percentage: 98),
     SkillItem(name: 'Java', percentage: 83),
     SkillItem(name: 'Teamwork', percentage: 92),
+    SkillItem(name: 'Adobe', percentage: 98),
   ];
 
   @override
